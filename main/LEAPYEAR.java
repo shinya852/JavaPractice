@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class LEAPYEAR {
 	private static int number;
 	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
 		while (true) {
-		    Scanner scanner = new Scanner(System.in);
 		    System.out.println("検証したい年を入力してください");
 			String strNum = scanner.next();
 			//数値の判定
@@ -16,6 +16,7 @@ public class LEAPYEAR {
 				//数値以外
 			} catch (NumberFormatException e) {
 				System.out.println("数値を入力してください");
+				continue;
 			}
 			//終了コードの判定→閏年の判定メソッド
 			if(number == 0) {
